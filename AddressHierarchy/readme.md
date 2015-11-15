@@ -95,7 +95,7 @@ Representación de la jerarquía
 
 ## Uso del modelo
 
-### Listar todas las localidades localidades
+### Listar todas las localidades
 
 ```
 void ListAllLocations()
