@@ -123,7 +123,7 @@
     <Content Include="doc\ef-address-hierarchy-association-2.png" />
     <Content Include="doc\ef-address-hierarchy-association-3.png" />
     <Content Include="doc\ef-address-hierarchy-association-4.png" />
-    <Content Include="doc\ef-address-hierarchy-association.png" />
+    <Content Include="doc\ef-address-hierarchy-association-1.png" />
     <Content Include="doc\ef-address-hierarchy-model-1.png" />
     <Content Include="doc\ef-address-hierarchy-model-2.png" />
     <Content Include="sqlscripts\create database addresshierarchy.sql" />

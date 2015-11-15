@@ -47,7 +47,7 @@ CREATE TABLE [dbo].[Address] (
 GO
 
 SET IDENTITY_INSERT [dbo].[Location] ON
-INSERT INTO [dbo].[Location] ([Id], [LocationType], [ParentId], [Name]) VALUES (1, 1, NULL, N'ESPANYA')
+INSERT INTO [dbo].[Location] ([Id], [LocationType], [ParentId], [Name]) VALUES (1, 1, NULL, N'ESPAÑA')
 INSERT INTO [dbo].[Location] ([Id], [LocationType], [ParentId], [Name]) VALUES (2, 2, 1, N'CATALUNYA')
 INSERT INTO [dbo].[Location] ([Id], [LocationType], [ParentId], [Name]) VALUES (3, 3, 2, N'BARCELONA')
 INSERT INTO [dbo].[Location] ([Id], [LocationType], [ParentId], [Name]) VALUES (4, 3, 2, N'GIRONA')
