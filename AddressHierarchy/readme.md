@@ -7,7 +7,7 @@ Representación de una dirección (calle, ciudad, provincia, etc.) usando [una t
 ### Tabla Location  
 Representa una localidad (ciudad, provincia, etc.)
 
-```
+```sql
 CREATE TABLE [dbo].[Location] (
     [Id]           INT            IDENTITY (1, 1) NOT NULL,
     [LocationType] INT            NOT NULL,
@@ -25,7 +25,7 @@ CREATE NONCLUSTERED INDEX [IX_Location_LocationType]
 ### Tabla Address
 Representa una dirección
 
-```
+```sql
 CREATE TABLE [dbo].[Address] (
     [Id]            INT            IDENTITY (1, 1) NOT NULL,
 	[AddressLine1]	NVARCHAR(50)   NOT NULL,	
@@ -48,7 +48,7 @@ CREATE TABLE [dbo].[Address] (
 
 ### Tipos de localidades 
 
-```
+```csharp
 public enum LocationTypes
 {
     Country = 1,
@@ -97,7 +97,7 @@ Representación de la jerarquía
 
 ### Listar todas las localidades
 
-```
+```csharp
 void ListAllLocations()
 {
     using (var db = new addressEntities())
@@ -128,7 +128,7 @@ void ListAllLocations()
   
 ### Listar ciudades
 
-```
+```csharp
 void ListCities()
 {
     using (var db = new addressEntities())
@@ -155,7 +155,7 @@ void ListCities()
 
 ### Insertar dirección
 
-```
+```csharp
 void InsertAddress(string line1, string cityName)
 {
     using (var db = new addressEntities())
@@ -188,7 +188,7 @@ void InsertAddress(string line1, string cityName)
 
 ### Listar direcciones
 
-```
+```csharp
 private static void ListAddresses()
 {
     using (var db = new addressEntities())
