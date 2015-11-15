@@ -8,14 +8,14 @@ Representación de una dirección (calle, ciudad, provincia, etc.) usando [una t
 Representa una localidad (ciudad, provincia, etc.)
 
 ```
-CREATE TABLE [dbo].[Location] (tion] ([Id])
-);
+CREATE TABLE [dbo].[Location] (
     [Id]           INT            IDENTITY (1, 1) NOT NULL,
     [LocationType] INT            NOT NULL,
     [ParentId]     INT            NULL,
     [Name]         NVARCHAR (128) NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_Location_Location] FOREIGN KEY ([ParentId]) REFERENCES [dbo].[Loca
+    CONSTRAINT [FK_Location_Location] FOREIGN KEY ([ParentId]) REFERENCES [dbo].[Location] ([Id])
+);
 
 CREATE NONCLUSTERED INDEX [IX_Location_LocationType]
     ON [dbo].[Location]([LocationType] ASC);
