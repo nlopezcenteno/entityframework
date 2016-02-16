@@ -5,4 +5,4 @@ Algunos ejemplo con Entity Framework
 Representación de una dirección (calle, ciudad, provincia, etc.) usando una tabla por jerarquía.
 
 ### [UnitTesting](UnitTesting) ###
-Cómo usar NSubstitute para hacer unit testing de Entity Framework 6.
+Ejemplo de uso de NSubstitute para hacer unit testing de Entity Framework 6.
