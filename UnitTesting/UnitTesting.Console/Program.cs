@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using UnitTesting.Core;
 using UnitTesting.Core.Models;
 
@@ -13,28 +12,25 @@ namespace UnitTesting.Console
 
             var allCourses = manager.GetAllCourses();
 
-            if (!allCourses.Any())
-            {
-                var courseOne = manager.CreateCourse("Course One", 5);
-                var courseTwo = manager.CreateCourse("Course Two", 7);
+            var courseOne = manager.CreateCourse("Course One", 5);
+            var courseTwo = manager.CreateCourse("Course Two", 7);
 
-                Student student;
+            Student student;
 
-                student = manager.CreateStudent("Gena", "Cantley", DateTime.Today);
-                manager.EnrollStudentToCourse(student.Id, courseOne.Id);
-                manager.EnrollStudentToCourse(student.Id, courseTwo.Id);
+            student = manager.CreateStudent("Gena", "Cantley", DateTime.Today);
+            manager.EnrollStudentToCourse(student.Id, courseOne.Id);
+            manager.EnrollStudentToCourse(student.Id, courseTwo.Id);
 
-                student = manager.CreateStudent("Gerald", "Hessling", DateTime.Today);
-                manager.EnrollStudentToCourse(student.Id, courseOne.Id);
+            student = manager.CreateStudent("Gerald", "Hessling", DateTime.Today);
+            manager.EnrollStudentToCourse(student.Id, courseOne.Id);
 
-                student = manager.CreateStudent("Nichole", "Billingsley", DateTime.Today);
-                manager.EnrollStudentToCourse(student.Id, courseOne.Id);
+            student = manager.CreateStudent("Nichole", "Billingsley", DateTime.Today);
+            manager.EnrollStudentToCourse(student.Id, courseOne.Id);
 
-                student = manager.CreateStudent("Reid", "Talty", DateTime.Today);
-                manager.EnrollStudentToCourse(student.Id, courseTwo.Id);
+            student = manager.CreateStudent("Reid", "Talty", DateTime.Today);
+            manager.EnrollStudentToCourse(student.Id, courseTwo.Id);
 
-                allCourses = manager.GetAllCourses();
-            }
+            allCourses = manager.GetAllCourses();
 
             foreach (var c in allCourses)
             {
